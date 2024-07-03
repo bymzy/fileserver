@@ -1,6 +1,8 @@
 /* #define CROW_STATIC_DIRECTORY "staticdir" */
 /* #define CROW_STATIC_ENDPOINT "/static/<path>" */
 #define CROW_DISABLE_STATIC_DIR
+#define CROW_STATIC_ALLOW_ABS_PATH
+
 #include "crow.h"
 #include "cmdline.h"
 #include <filesystem>

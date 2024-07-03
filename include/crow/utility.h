@@ -775,9 +775,12 @@ namespace crow
                 }
                 else if ((c == '/') || (c == '\\'))
                 {
+                    
                     if (CROW_UNLIKELY(i == 0)) //Prevent Unix Absolute Paths (Windows Absolute Paths are prevented with `(c == ':')`)
                     {
+#ifndef CROW_STATIC_ALLOW_ABS_PATH
                         data[i] = replacement;
+#endif
                     }
                     else
                     {
